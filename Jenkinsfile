@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t vasistavasudev/pride:$BUILD_NUMBER .'
+                sh 'docker build -t vasistavasudev/prideview:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push vasistavasudev/pride:$BUILD_NUMBER'
+                sh 'docker push vasistavasudev/prideview:$BUILD_NUMBER'
             }
         }
 }
