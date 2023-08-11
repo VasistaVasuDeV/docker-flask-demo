@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t ylmt/flaskapp:$BUILD_NUMBER .'
+                sh 'docker build -t vasistavasudev/pride:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
